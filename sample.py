@@ -3,6 +3,8 @@ import tensorflow as tf
 
 def generate_model():
     model = tf.keras.Sequential([
+
+        # first convolution layer
         tf.keras.layers.Conv2D(32, filter_size=3, activation='relu'),
         tf.keras.MaxPool2D(pool_size=2, strides=2),
 
@@ -16,3 +18,4 @@ def generate_model():
         tf.keras.Dense(10, activation='softmax')
     ])
     return model
+
